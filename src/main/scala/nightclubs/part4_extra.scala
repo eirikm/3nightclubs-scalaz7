@@ -26,5 +26,9 @@ object GayBikerBar extends Nightclub {
     val checks = List(checkAge _, checkClothes _, checkSobriety _, checkGender _)
     checks.traverse[({type l[a] = ValidationNel[String, a]})#l, Person](_ andThen (_.toValidationNel) apply p) map { case c :: _ => c.age + 1.5D }
   }
+}
 
+object GayBikerBarTest extends App {
+  prettyPrint(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))(GayBikerBar.costToEnter)
+  prettyPrint(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))(GayBikerBar.costToEnter)
 }
