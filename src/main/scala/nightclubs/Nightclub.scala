@@ -17,7 +17,7 @@ import Scalaz._
  */
 trait Nightclub {
 
-  //First CHECK
+  // First CHECK
   def checkAge(p: Person): Validation[String, Person] =
     if (p.age < 18)
       "Too Young!".fail
@@ -26,7 +26,7 @@ trait Nightclub {
     else
       p.success
 
-  //Second CHECK
+  // Second CHECK
   def checkClothes(p: Person): Validation[String, Person] =
     if (p.gender == Gender.Male && !p.clothes("Tie"))
       "Smarten Up!".fail
@@ -35,7 +35,7 @@ trait Nightclub {
     else
       p.success
 
-  //Third CHECK
+  // Third CHECK
   def checkSobriety(p: Person): Validation[String, Person] =
     if (Set(Sobriety.Drunk, Sobriety.Paralytic, Sobriety.Unconscious) contains p.sobriety)
       "Sober Up!".fail
