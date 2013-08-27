@@ -44,7 +44,7 @@ object ClubTropicana extends Nightclub {
  *
  */
 object ClubTropicanaTest extends App {
-  prettyPrint(Dave.copy(sobriety = Sobriety.Paralytic))(ClubTropicana.costToEnter)
+  prettyPrint(Dave.copy(name = "Drunk Dave", sobriety = Sobriety.Paralytic))(ClubTropicana.costToEnter)
   prettyPrint(Ruby)(ClubTropicana.costToEnter)
 }
 /**

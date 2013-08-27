@@ -48,7 +48,7 @@ object GayBar extends Nightclub {
 
 object GayBarTest extends App {
   prettyPrint(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))(GayBar.costToEnter)
-  prettyPrint(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))(GayBar.costToEnter)
+  prettyPrint(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))(GayBar.costToEnter2)
 }
 
 /**
