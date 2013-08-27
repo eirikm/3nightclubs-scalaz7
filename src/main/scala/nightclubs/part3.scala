@@ -47,13 +47,8 @@ object GayBar extends Nightclub {
 }
 
 object GayBarTest extends App {
-  def prettyPrintCostToEnter(p: Person) {
-    println(s"${p.name}: ${p} - ${GayBar.costToEnter(p)}")
-  }
-
-
-  prettyPrintCostToEnter(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))
-  prettyPrintCostToEnter(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))
+  prettyPrint(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))(GayBar.costToEnter)
+  prettyPrint(Person("Bill Gates", Gender.Male, 59, Set("Jeans"), Sobriety.Paralytic))(GayBar.costToEnter)
 }
 
 /**

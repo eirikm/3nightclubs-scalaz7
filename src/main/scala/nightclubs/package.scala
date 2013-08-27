@@ -17,7 +17,13 @@ package object nightclubs {
 
   type Validated[A] = ValidationNel[String, A]
 
+  // testdata
   val Dave = Person("Dave", Gender.Male, 41, Set("Tie", "Jeans"), Sobriety.Sober)
   val Ken = Person("Ken", Gender.Male, 28, Set("Tie", "Shirt"), Sobriety.Tipsy)
   val Ruby = Person("Ruby", Gender.Female, 25, Set("High Heels"), Sobriety.Tipsy)
+
+  // test util method
+  def prettyPrint[A](p: Person)(f: Person => A) {
+    println(s"${p.name}: $p - ${f(p)}")
+  }
 }

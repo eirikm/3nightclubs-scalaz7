@@ -44,12 +44,8 @@ object ClubTropicana extends Nightclub {
  *
  */
 object ClubTropicanaTest extends App {
-  def prettyPrintCostToEnter(p: Person) {
-    println(s"${p.name}: ${p} - ${ClubTropicana costToEnter p}")
-  }
-
-  prettyPrintCostToEnter(Dave.copy(sobriety = Sobriety.Paralytic))
-  prettyPrintCostToEnter(Ruby)
+  prettyPrint(Dave.copy(sobriety = Sobriety.Paralytic))(ClubTropicana.costToEnter)
+  prettyPrint(Ruby)(ClubTropicana.costToEnter)
 }
 /**
  *
